@@ -28,8 +28,6 @@ test("POST to /api/v1/migrations", async () => {
 
   expect(Array.isArray(response2Body)).toBe(true);
   expect(response2Body.length).toBe(0);
-
-
 });
 
 // Only test => indica ao jest que execute apneas esse test e pule o demais!

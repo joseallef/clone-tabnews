@@ -19,7 +19,6 @@ test("GET to /api/v1/migrations", async () => {
 
   expect(Array.isArray(responseBody)).toBe(true);
   expect(responseBody.length).toBeGreaterThan(0);
-
 });
 
 // Only test => indica ao jest que execute apneas esse test e pule o demais!
