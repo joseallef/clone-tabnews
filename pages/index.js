@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Confetti from "react-confetti";
 
 function Home() {
-  const [windowSize, setWindowSize] = React.useState();
+  const [, setWindowSize] = React.useState();
 
   const useWindowSize = () => {
     if (typeof window !== "undefined") {
       return { width: 1200, height: 800 };
     }
 
-    React.useEffect(() => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
       window.addEventListener("resize", () => {
         setWindowSize({ width: window.innerWidth, height: window.innerHeight });
       });

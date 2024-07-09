@@ -18,9 +18,3 @@ test("GET to /api/v1/status", async () => {
   expect(responseBody.dependencies.database.max_connections).toEqual(100);
   expect(responseBody.dependencies.database.opened_connections).toEqual(1);
 });
-
-// Only test => indica ao jest que execute apneas esse test e pule o demais!
-// test.only("Teste de SQL Injection", async () => {
-//   await fetch("http://localhost:3000/api/v1/status?databaseName='; SELECT pg_sleep(4); --");
-
-// })
