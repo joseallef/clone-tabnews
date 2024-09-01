@@ -6,10 +6,10 @@ async function status(request, response) {
   const databaseVersionValue = await dataVersionResult.rows[0].server_version;
 
   const databaseMaxConnectionsResult = await database.query(
-    "SHOW max_connections;"
+    "SHOW max_connections;",
   );
-  const databaseMaxConnectionsValue = await databaseMaxConnectionsResult.rows[0]
-    .max_connections;
+  const databaseMaxConnectionsValue =
+    await databaseMaxConnectionsResult.rows[0].max_connections;
 
   const databaseName = process.env.POSTGRES_DB;
   const databaseOpenedConnectionResult = await database.query({
