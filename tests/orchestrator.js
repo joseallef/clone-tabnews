@@ -26,6 +26,7 @@ async function clearDatabase() {
 
 const orchestrator = {
   waitForAllServices,
-  clearDatabase
+  clearDatabase,
 };
+
 export default orchestrator;
