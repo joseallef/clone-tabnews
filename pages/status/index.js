@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import styles from './status.module.css';
+import styles from "./status.module.css";
 
 async function fetchAPI(key) {
   const response = await fetch(key);
@@ -33,15 +33,21 @@ function UpdateAt() {
         <div className={styles.infoList}>
           <div className={styles.infoItem}>
             <span className={styles.key}>Versão:</span>
-            <span className={styles.value}>{data.dependencies.database.version}</span>
+            <span className={styles.value}>
+              {data.dependencies.database.version}
+            </span>
           </div>
           <div className={styles.infoItem}>
             <span className={styles.key}>Máximo de conexões:</span>
-            <span className={styles.value}>{data.dependencies.database.max_connections}</span>
+            <span className={styles.value}>
+              {data.dependencies.database.max_connections}
+            </span>
           </div>
           <div className={styles.infoItem}>
             <span className={styles.key}>Conexões abertas:</span>
-            <span className={styles.value}>{data.dependencies.database.opened_connections}</span>
+            <span className={styles.value}>
+              {data.dependencies.database.opened_connections}
+            </span>
           </div>
         </div>
       )}
