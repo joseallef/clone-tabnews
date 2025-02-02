@@ -2,13 +2,11 @@ import { createRouter } from "next-connect";
 import database from "infra/database";
 import migrationRunner from "node-pg-migrate";
 import { resolve } from "node:path";
-import controller from "infra/controller.js"
+import controller from "infra/controller.js";
 
 const router = createRouter();
 
-router
-  .get(getMigrationsHandle)
-  .post(postMigrationsHandle);
+router.get(getMigrationsHandle).post(postMigrationsHandle);
 
 export default router.handler(controller.onErrorHandlers);
 

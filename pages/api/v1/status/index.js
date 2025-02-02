@@ -38,5 +38,4 @@ async function getHandler(request, response) {
       },
     },
   });
-
 }

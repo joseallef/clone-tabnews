@@ -10,8 +10,8 @@ async function query(queryObject) {
   } catch (error) {
     const serviceErrorObject = new ServiceError({
       message: "Erro na conenxão com Bando ou na Query.",
-      cause: error
-    })
+      cause: error,
+    });
     throw serviceErrorObject;
   } finally {
     await client?.end();
