@@ -2,6 +2,7 @@ import {
   InternalServerError,
   MethodNotAllowedError,
   ValidateError,
+  NotFoundError,
 } from "infra/errors";
 
 function onNoMatchHandler(request, response) {
@@ -10,7 +11,7 @@ function onNoMatchHandler(request, response) {
 }
 
 function onErrorHandler(error, request, response) {
-  if (error instanceof ValidateError) {
+  if (error instanceof ValidateError || error instanceof NotFoundError) {
     return response.status(error.statusCode).json(error);
   }
 
