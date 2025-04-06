@@ -58,7 +58,6 @@ export class ValidateError extends Error {
   }
 }
 
-
 export class NotFoundError extends Error {
   constructor({ cause, message, action }) {
     super(message || "Não foi possível encotrar este recurso no sistema", {
