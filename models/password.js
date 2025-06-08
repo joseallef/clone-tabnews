@@ -1,8 +1,8 @@
-import bcriptjs from "bcryptjs";
+import bcryptjs from "bcryptjs";
 
 async function hash(password) {
   const rounds = getNumberOfRounds();
-  return await bcriptjs.hash(password, rounds);
+  return await bcryptjs.hash(password, rounds);
 }
 
 function getNumberOfRounds() {
@@ -10,7 +10,7 @@ function getNumberOfRounds() {
 }
 
 async function compare(providerPassword, storedPassword) {
-  return await bcriptjs.compare(providerPassword, storedPassword);
+  return await bcryptjs.compare(providerPassword, storedPassword);
 }
 
 const password = {
